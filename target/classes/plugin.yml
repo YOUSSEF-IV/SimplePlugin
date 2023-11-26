@@ -4,19 +4,19 @@ main: org.example.SimplePlugin
 commands:
   ping:
     description: "This command displays the ping."
-    usage: "/sp <command>"
+    usage: "/<command>"
   pings:
     description: "This command displays the pings of all players"
-    usage: "/sp <command>"
+    usage: "/<command>"
   go:
     description: "Goto the place you set"
-    usage: "/sp go <name>"
+    usage: "/go <name>"
   set:
     description: "Set a place to go"
-    usage: "/sp set <name>"
+    usage: "/set <name>"
   check:
     description: "check all points of tp"
-    usage: "/sp <command>"
+    usage: "/<command>"
   delete:
     description: "delete a tp point"
-    usage: "/sp set <name>"
+    usage: "/set <name>"
