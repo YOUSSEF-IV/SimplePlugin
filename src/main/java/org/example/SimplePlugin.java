@@ -8,6 +8,8 @@ public class SimplePlugin extends JavaPlugin {
         getLogger().info("onEnable is called!");
         this.getCommand("ping").setExecutor(new SimpleCommandPing());
         this.getCommand("pings").setExecutor(new SimpleCommandPing());
+        this.getCommand("spawn").setExecutor(new SimpleSpawnCommand());
+        this.getCommand("setspawn").setExecutor(new SimpleSpawnCommand());
         this.getCommand("go").setExecutor(new SimpleCommandHome(this));
         this.getCommand("set").setExecutor(new SimpleCommandHome(this));
         this.getCommand("check").setExecutor(new SimpleCommandHome(this));

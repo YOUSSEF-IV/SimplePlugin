@@ -20,3 +20,9 @@ commands:
   delete:
     description: "delete a tp point"
     usage: "/set <name>"
+  spawn:
+    description: "goto spawn"
+    usage: "/<command>"
+  setspawn:
+    description: "setting a spawn place"
+    usage: "/<command>"
