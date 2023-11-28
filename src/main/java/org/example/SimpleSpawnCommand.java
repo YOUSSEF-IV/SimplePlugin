@@ -32,13 +32,7 @@ public class SimpleSpawnCommand implements CommandExecutor {
     void handlespawncommand(Player player) {
         World world = player.getWorld();
         Location WorldSpawn = world.getSpawnLocation();
-        Location UpperBlock = new Location(world,WorldSpawn.getX(),WorldSpawn.getY() + 1,WorldSpawn.getZ());
-        if(world.getBlockAt(WorldSpawn = new Location(world,WorldSpawn.getX(),WorldSpawn.getY() + 1,WorldSpawn.getZ())).getType().isAir() && world.getBlockAt(WorldSpawn = new Location(world,WorldSpawn.getX(),WorldSpawn.getY() + 2,WorldSpawn.getZ())).getType().isAir()){
-            player.teleport(WorldSpawn);
-            player.sendMessage("you're at spawn");
-        } else {
-            player.sendMessage("obstructed spawn");
-        }
+        player.teleport(WorldSpawn);
     }
 
 }

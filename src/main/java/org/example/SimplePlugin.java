@@ -16,6 +16,7 @@ public class SimplePlugin extends JavaPlugin {
         this.getCommand("delete").setExecutor(new SimpleCommandHome(this));
         this.getCommand("go").setTabCompleter(new SimpleCommandHomeCompleter(this));
         this.getCommand("delete").setTabCompleter(new SimpleCommandHomeCompleter(this));
+        getServer().getPluginManager().registerEvents(new SimpleTeleportListener(), this);
 
     }
     @Override
