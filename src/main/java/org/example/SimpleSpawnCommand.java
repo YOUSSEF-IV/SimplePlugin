@@ -1,5 +1,9 @@
 package org.example;
 
+import org.bukkit.Location;
+import org.bukkit.World;
+import org.bukkit.block.Block;
+import org.bukkit.block.BlockState;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -26,8 +30,15 @@ public class SimpleSpawnCommand implements CommandExecutor {
     }
 
     void handlespawncommand(Player player) {
-        player.teleport(player.getWorld().getSpawnLocation());
-        player.sendMessage("you're at spawn");
+        World world = player.getWorld();
+        Location WorldSpawn = world.getSpawnLocation();
+        Location UpperBlock = new Location(world,WorldSpawn.getX(),WorldSpawn.getY() + 1,WorldSpawn.getZ());
+        if(world.getBlockAt(WorldSpawn = new Location(world,WorldSpawn.getX(),WorldSpawn.getY() + 1,WorldSpawn.getZ())).getType().isAir() && world.getBlockAt(WorldSpawn = new Location(world,WorldSpawn.getX(),WorldSpawn.getY() + 2,WorldSpawn.getZ())).getType().isAir()){
+            player.teleport(WorldSpawn);
+            player.sendMessage("you're at spawn");
+        } else {
+            player.sendMessage("obstructed spawn");
+        }
     }
 
 }
