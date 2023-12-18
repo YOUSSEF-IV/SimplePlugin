@@ -1,4 +1,5 @@
 org\example\SimpleCommandHomeCompleter.class
+org\example\SimpleCommandBiome.class
 org\example\SimpleTeleportListener.class
 org\example\SimpleCommandPing.class
 org\example\SimpleCommandHome.class

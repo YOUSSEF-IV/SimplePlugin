@@ -26,3 +26,6 @@ commands:
   setspawn:
     description: "setting a spawn place"
     usage: "/<command>"
+  biomes:
+    description: "get biome for the player postion"
+    usage: "/<command>"
